@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header_one"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ПРИЛОЖЕНИЕ\nТАБЛИЦА Д.И. МЕНДЕЛЕЕВА"
+        android:layout_marginTop="30dp"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#177C3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_two"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Задайте диапазон дат открытия элементов:"
+        android:textColor="#4C9063"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_one" />
+
+    <LinearLayout
+        android:id="@+id/linearIn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_two">
+
+        <EditText
+            android:id="@+id/minIn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:hint="Начальное значение"
+            android:textColor="#177C3A"
+            android:textColorHint="#4C9063"
+            android:background="#D6EFDF"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/maxIn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:hint="Конечное значение"
+            android:textColor="#177C3A"
+            android:textColorHint="#4C9063"
+            android:background="#D6EFDF"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginTop="14dp"
+            android:paddingStart="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="14dp"
+        android:text="ПОИСК"
+        android:backgroundTint="#177C3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearIn" />
+
+    <TextView
+        android:id="@+id/header_three"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Результаты поиска:"
+        android:textColor="#4C9063"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:hint="Вывод найденных элементов"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        android:textColor="#177C3A"
+        android:textColorHint="#4C9063"
+        android:background="#E6EFE9"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_three"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
